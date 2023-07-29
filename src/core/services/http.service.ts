@@ -8,11 +8,14 @@ import { Router } from '@angular/router';
 export class HttpService {
 
   url: string = '';
-  organizationData: any = [];
-  getHttpOptions: ((options?: any) => any) | undefined;
 
   constructor(public http: HttpClient, public router: Router) { 
+    
+  }
 
+  getActivity() {
+    const apiUrl = 'https://www.boredapi.com/api/activity';
+    return this.http.get(apiUrl);
   }
 
 
