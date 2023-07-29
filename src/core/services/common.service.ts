@@ -6,6 +6,8 @@ import { Router } from '@angular/router';
 })
 export class CommonService {
 
+  selectedIndex: number = 0;
+
   constructor(public router: Router) { }
 
   navigateTo(page: any) {
@@ -14,6 +16,12 @@ export class CommonService {
       behavior: 'smooth'
     });
     this.router.navigate([page]);
+  }
+
+  selectTab(tab: any, type: String) {    
+    if(tab.type == type) {
+      this.selectedIndex = tab.index;
+    }
   }
 
 }

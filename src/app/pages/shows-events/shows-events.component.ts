@@ -7,7 +7,22 @@ import { CommonService } from 'src/core/services/common.service';
   styleUrls: ['./shows-events.component.scss']
 })
 export class ShowsEventsComponent {
-  constructor(public common: CommonService) {
+  
+  options: any[] = [];
+  type: string = '';
+  title: String = '';
+  content: String = '';
 
+  constructor(public common: CommonService) {
+    this.options = [
+      'Upcoming', 'Past'
+    ];
+    this.type = 'showsEvents';
+    this.title = 'Our Shows & Events';
+    this.content = 'Check out upcoming and past shows & events.';
+  }
+
+  ngOnInit(): void {
+    this.common.selectedIndex = 0
   }
 }

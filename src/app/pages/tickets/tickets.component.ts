@@ -7,7 +7,14 @@ import { CommonService } from 'src/core/services/common.service';
   styleUrls: ['./tickets.component.scss']
 })
 export class TicketsComponent {
-  constructor(public common: CommonService) {
 
+  type: string = '';
+  title: String = '';
+  content: String = '';
+
+  constructor(public common: CommonService) {
+    this.type = 'showsEvents';
+    this.title = 'Tickets On Sale Now!';
+    this.content = 'Check out upcoming and past shows & events and grab your ticket right now.';
   }
 }

@@ -1,9 +1,13 @@
-<div class="col-lg-12">
+
     <div class="heading-tabs">
         <div class="row">
             <div class="col-lg-8">
-                <ul>
-                  <!-- <li *ngFor="let option of options; let index=index"><a (click)="selectTab(index)">{{option}}</a></li> -->
+                <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+                  <li *ngFor="let option of options; let index=index"
+                  class="ui-state-default ui-corner-top"
+                    [ngClass]="{'ui-tabs-active ui-state-active' : (selectedIndex == index)}">
+                    <a (click)="selectTab(index)">{{option}}</a>
+                </li>
                 </ul>
             </div>
             <div class="col-lg-4">
@@ -13,4 +17,3 @@
             </div>
         </div>
     </div>
-</div>
