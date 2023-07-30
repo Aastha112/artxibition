@@ -11,6 +11,10 @@ import { HttpService } from 'src/core/services/http.service';
 export class HomeComponent implements OnInit, OnDestroy {
 
   ActivitySubscription$ : Subscription | undefined;
+  second: number = 0;
+  minute: number = 0;
+  hour: number = 0;
+  day: number = 0;
 
   constructor(public common: CommonService, public http: HttpService) {
 

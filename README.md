@@ -1,6 +1,20 @@
 # Artxibition
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
+Converted `https://www.free-css.com/free-css-templates/page294/artxibition` HTML files into Angular project with latest version 15.
+
+# Core points
+
+Made three reusable components which are present in multiple main components:
+    -> Navigation bar
+    -> Page heading
+    -> Tab-options
+
+Made proper use of builtin and structural directives in the application.
+
+Made two different services file:
+    -> HTTP service for calling an API
+    -> Common service for adding common function which is used in multiple components
+
 
 ## Development server
 
